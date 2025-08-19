@@ -21,4 +21,3 @@ lag("sucesso.", "success")
 lag("Hoje é um ótimo dia para programar! :laptop:", "info")
 lag("Erro detectado! :x:", "error")
 lag("Mensagem normal sem cor ou emoji.")
-
