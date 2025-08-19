@@ -4,8 +4,19 @@ import emoji
 # Inicializa o Colorama
 init(autoreset=True)
 
-# Mensagens coloridas com emojis
-print(Fore.GREEN + emoji.emojize("Olá! :smile:", language="alias"))
-print(Fore.BLUE + emoji.emojize("Hoje é um ótimo dia para programar! :laptop:", language="alias"))
-print(Fore.RED + emoji.emojize("Erro detectado! :x:", language="alias"))
-print(Style.RESET_ALL + "Texto normal agora.")
+# Função para mostrar mensagens coloridas com emojis
+def log(message: str, level: str = "info"):
+    if level == "success":
+        print(Fore.GREEN + emoji.emojize(message, language="alias"))
+    elif level == "info":
+        print(Fore.BLUE + emoji.emojize(message, language="alias"))
+    elif level == "error":
+        print(Fore.RED + emoji.emojize(message, language="alias"))
+    else:
+        print(Style.RESET_ALL + message)
+
+# Testando a função
+log("Olá! :smile:", "success")
+log("Hoje é um ótimo dia para programar! :laptop:", "info")
+log("Erro detectado! :x:", "error")
+log("Mensagem normal sem cor ou emoji.")
