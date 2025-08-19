@@ -24,4 +24,6 @@ pip install dist/Cores_Emojis-0.1.0-py3-none-any.whl
 !!! OU !!!
 ```bash
 pip install dist/Cores_Emojis-0.1.0.tar.gz
-
+```
+-------------------------------
+Foi criado um erro de "merge" proposital que consiste em ambos alterarem o mesmo código e ao mesmo tempo, a correção foi feita após os dois derem commit com e repositório igual.
