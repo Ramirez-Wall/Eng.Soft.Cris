@@ -5,7 +5,7 @@ import emoji
 init(autoreset=True)
 
 # Função para mostrar mensagens coloridas com emojis
-def log(message: str, level: str = "info"):
+def lag(message: str, level: str = "info"):
     if level == "success":
         print(Fore.GREEN + emoji.emojize(message, language="alias"))
     elif level == "info":
@@ -16,8 +16,8 @@ def log(message: str, level: str = "info"):
         print(Style.RESET_ALL + message)
 
 # Testando a função
-log("Olá! :smile:", "success")
-log("sucesso.", "success")
-log("Hoje é um ótimo dia para programar! :laptop:", "info")
-log("Erro detectado! :x:", "error")
-log("Mensagem normal sem cor ou emoji.")
+lag("Olá! :smile:", "success")
+lag("sucesso.", "success")
+lag("Hoje é um ótimo dia para programar! :laptop:", "info")
+lag("Erro detectado! :x:", "error")
+lag("Mensagem normal sem cor ou emoji.")
