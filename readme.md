@@ -12,13 +12,6 @@ Pré-requisitos
 
  Instalação
 
-Clone o repositório:
-
-```bash
-git clone https://github.com/seu-usuario/seu-projeto.git
-cd seu-projeto
-```
-
 Instale as dependências com Poetry:
 
 ```bash
