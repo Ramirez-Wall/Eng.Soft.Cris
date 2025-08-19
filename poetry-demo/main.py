@@ -17,6 +17,7 @@ def log(message: str, level: str = "info"):
 
 # Testando a função
 log("Olá! :smile:", "success")
+log("sucesso.", "success")
 log("Hoje é um ótimo dia para programar! :laptop:", "info")
 log("Erro detectado! :x:", "error")
 log("Mensagem normal sem cor ou emoji.")
