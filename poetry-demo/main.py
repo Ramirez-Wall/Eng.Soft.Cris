@@ -13,6 +13,10 @@ def lag(message: str, level: str = "info"):
         if not isinstance(level, str):
             raise TypeError("O nível deve ser uma string.")
 
+        if not message.strip():  # mensagem vazia ou só espaços
+            print("")  # sem códigos ANSI
+            return
+
         if level == "success":
             print(Fore.GREEN + emoji.emojize(message, language="alias"))
         elif level == "info":
@@ -23,6 +27,7 @@ def lag(message: str, level: str = "info"):
             print(Style.RESET_ALL + message)
     except Exception as e:
         print(Fore.RED + f"[EXCEPTION] {e}")
+
 
 def capturar_saida(func, *args, **kwargs):
     f = io.StringIO()
