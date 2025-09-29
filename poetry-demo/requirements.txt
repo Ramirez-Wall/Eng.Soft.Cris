@@ -1,0 +1,4 @@
+pytest
+colorama
+emoji
+build

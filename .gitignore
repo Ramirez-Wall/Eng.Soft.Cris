@@ -1,25 +1,7 @@
- Byte-compiled / cache
 __pycache__/
-*.py[cod]
-*$py.class
-
- Virtual environment
-.venv/
-
- Poetry build / dist
-dist/
+*.pyc
+.dist-info/
 build/
-*.egg-info/
-
- VS Code settings
-.vscode/
-
- Sistema operacional
-.DS_Store
-Thumbs.db
-
- Logs
-*.log
-
-IDEs
-.idea/
+dist/
+.venv/
+.env

@@ -1,0 +1,7 @@
+{
+    "python.testing.pytestArgs": [
+        "poetry-demo"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}

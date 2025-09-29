@@ -1,43 +1,5 @@
 import pytest
-from colorama import Fore, Style, init
-import emoji
-import io
-from contextlib import redirect_stdout
-
-# Inicializa o Colorama
-init(autoreset=True)
-
-# Função principal
-def lag(message: str, level: str = "info"):
-    try:
-        if not isinstance(message, str):
-            raise TypeError("A mensagem deve ser uma string.")
-        if not isinstance(level, str):
-            raise TypeError("O nível deve ser uma string.")
-
-        if level == "success":
-            print(Fore.GREEN + emoji.emojize(message, language="alias"))
-        elif level == "info":
-            print(Fore.BLUE + emoji.emojize(message, language="alias"))
-        elif level == "error":
-            print(Fore.RED + emoji.emojize(message, language="alias"))
-        else:
-            print(Style.RESET_ALL + message)
-    except Exception as e:
-        print(Fore.RED + f"[EXCEPTION] {e}")
-
-
-# Função auxiliar para capturar saída de print
-def capturar_saida(func, *args, **kwargs):
-    f = io.StringIO()
-    with redirect_stdout(f):
-        func(*args, **kwargs)
-    return f.getvalue().strip()
-
-
-# -----------------------
-# TESTES POSITIVOS (10)
-# -----------------------
+from main import lag, capturar_saida
 
 def test_success_com_emoji():
     saida = capturar_saida(lag, "Olá! :smile:", "success")
@@ -79,11 +41,7 @@ def test_sem_nivel():
     saida = capturar_saida(lag, "Mensagem sem nível")
     assert "Mensagem sem nível" in saida
 
-
-# -----------------------
-# TESTES NEGATIVOS (10)
-# -----------------------
-
+# negativos
 def test_mensagem_vazia():
     saida = capturar_saida(lag, "", "success")
     assert saida == ""
