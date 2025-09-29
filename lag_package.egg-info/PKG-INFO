@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: lag_package
+Version: 0.0.1
+Summary: Pacote exemplo com a função lag
+Author: Seu Nome
+Author-email: Ramirez Silva <uchihamake@hotmail.com>
+Requires-Python: >=3.10
+Requires-Dist: colorama<0.5.0,>=0.4.6
+Requires-Dist: emoji<3.0.0,>=2.14.1

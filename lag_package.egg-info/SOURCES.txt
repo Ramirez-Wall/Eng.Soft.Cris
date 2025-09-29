@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+lag_package.egg-info/PKG-INFO
+lag_package.egg-info/SOURCES.txt
+lag_package.egg-info/dependency_links.txt
+lag_package.egg-info/requires.txt
+lag_package.egg-info/top_level.txt
