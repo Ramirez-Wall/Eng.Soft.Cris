@@ -13,8 +13,7 @@ def send_email():
     msg["From"] = "no-reply@github.com"
     msg["To"] = destinatario
 
-    # Aqui estamos apenas simulando o envio (print).
-    # Para envio real: configure servidor SMTP e use smtplib.SMTP(...)
+    # Simulando o envio (print).
     print(f"E-mail (simulado) enviado para {destinatario}: {corpo}")
 
 if __name__ == "__main__":
