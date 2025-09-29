@@ -7,7 +7,7 @@ def test_lag_chama_emoji_emojize():
     mensagem = "Olá! :smile:"
     nivel = "success"
     
-    with patch("test_lag.emoji.emojize") as mock_emojize:
+    with patch("main.emoji.emojize") as mock_emojize:
         with patch("builtins.print") as mock_print:
             mock_emojize.return_value = "Olá! 😄"
             lag(mensagem, nivel)
